@@ -23,7 +23,7 @@ const HomePage = () => {
 
   const checkAuthSimple = async () => {
   try {
-    const response = await axios.get('http://localhost:5000/api/auth/check', {
+    const response = await axios.get('https://weatherwear-3qko.onrender.com/api/auth/check', {
       withCredentials: true
     });
     

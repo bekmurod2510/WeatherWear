@@ -12,7 +12,7 @@ const ProtectedRoute = ({ children }) => {
 
   const checkAuth = async () => {
     try {
-      await axios.get('http://localhost:5000/api/auth/me', {
+      await axios.get('https://weatherwear-3qko.onrender.com/api/auth/me', {
         withCredentials: true
       })
       setIsAuthenticated(true)

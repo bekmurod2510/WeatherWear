@@ -20,7 +20,7 @@ const Navbar = () => {
 
   const checkAuthStatus = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/auth/me', {
+      const response = await axios.get('https://weatherwear-3qko.onrender.com/api/auth/me', {
         withCredentials: true
       })
       setIsLoggedIn(true)

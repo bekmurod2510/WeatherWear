@@ -13,7 +13,7 @@ const RecentSearches = ({ onSelectLocation, limit = 5 }) => {
 
   const fetchRecentSearches = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/weather/history', {
+      const response = await axios.get('https://weatherwear-3qko.onrender.com/api/weather/history', {
         params: { limit },
         withCredentials: true
       })

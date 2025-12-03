@@ -18,7 +18,7 @@ const Dashboard = () => {
 
   const fetchUserPreferences = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/auth/me', {
+      const response = await axios.get('https://weatherwear-3qko.onrender.com/api/auth/me', {
         withCredentials: true
       })
       if (response.data.user?.preferences) {
@@ -37,7 +37,7 @@ const Dashboard = () => {
     try {
       setLoading(true)
       const response = await axios.post(
-        'http://localhost:5000/api/outfit/suggest',
+        'https://weatherwear-3qko.onrender.com/api/outfit/suggest',
         {
           location: data.location,
           temperature: data.temperature,
@@ -56,7 +56,7 @@ const Dashboard = () => {
   const updatePreferences = async (updates) => {
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/outfit/preferences',
+        'https://weatherwear-3qko.onrender.com/api/outfit/preferences',
         updates,
         { withCredentials: true }
       )

@@ -11,7 +11,7 @@ const History = () => {
 
   const fetchHistory = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/weather/history', {
+      const response = await axios.get('https://weatherwear-3qko.onrender.com/api/weather/history', {
         withCredentials: true
       })
       setHistory(response.data.data)

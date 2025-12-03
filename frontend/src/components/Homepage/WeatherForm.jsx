@@ -18,7 +18,7 @@ const WeatherForm = ({ onWeatherData }) => {
 
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/weather/current',
+        'https://weatherwear-3qko.onrender.com/api/weather/current',
         { location },
         { withCredentials: true }
       )
