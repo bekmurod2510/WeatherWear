@@ -56,9 +56,9 @@ const Login = () => {
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="form-control">
-              <label className="label">
+          <form onSubmit={handleSubmit} className="space-y-5">
+            <div className="form-control flex flex-col ">
+              <label className="label flex flex-col">
                 <span className="label-text font-medium">Email Address</span>
               </label>
               <input
