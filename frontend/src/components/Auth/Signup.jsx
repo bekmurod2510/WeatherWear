@@ -149,7 +149,8 @@ const Signup = () => {
           )}
 
           <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="form-control flex flex-col">
+            <div className="form-control flex flex-col" 
+            style={{ display: 'flex', flexDirection: 'column' }}>
               <label className="label">
                 <span className="label-text font-medium">Full Name</span>
               </label>
@@ -164,7 +165,8 @@ const Signup = () => {
               />
             </div>
 
-            <div className="form-control flex flex-col">
+            <div className="form-control flex flex-col"
+            style={{ display: 'flex', flexDirection: 'column' }}>
               <label className="label">
                 <span className="label-text font-medium">Email Address</span>
               </label>
@@ -179,7 +181,8 @@ const Signup = () => {
               />
             </div>
 
-            <div className="form-control flex flex-col">
+            <div className="form-control flex flex-col"
+            style={{ display: 'flex', flexDirection: 'column' }}>
               <label className="label">
                 <span className="label-text font-medium">Password</span>
                 {formData.password && (
@@ -204,7 +207,8 @@ const Signup = () => {
               </label>
             </div>
 
-            <div className="form-control flex flex-col">
+            <div className="form-control flex flex-col"
+            style={{ display: 'flex', flexDirection: 'column' }}>
               <label className="label">
                 <span className="label-text font-medium">Confirm Password</span>
               </label>

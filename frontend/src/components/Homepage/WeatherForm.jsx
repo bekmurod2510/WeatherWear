@@ -42,7 +42,7 @@ const WeatherForm = ({ onWeatherData }) => {
         </div>
       )}
 
-      <div className="form-control">
+      <div className="form-control" style={{ display: 'flex', flexDirection: 'column' }}>
         <label className="label">
           <span className="label-text">Enter City Name</span>
         </label>
