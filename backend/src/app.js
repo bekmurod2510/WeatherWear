@@ -13,35 +13,29 @@ const app = express();
 // CORS configuration
 const corsOptions = {
   origin: function (origin, callback) {
-    // Allow these origins - ADD YOUR VERACEL URL
+
     const allowedOrigins = [
       'https://weather-wear-omega.vercel.app',
-      'https://weatherwear-3qko.onrender.com', // Your backend domain
       'http://localhost:5173'
     ];
-    
-    console.log('CORS Origin:', origin); // Debug log
-    
-    // Allow requests with no origin (like mobile apps or curl)
+
     if (!origin) {
       console.log('No origin - allowing');
       return callback(null, true);
     }
-    
-    // Check if origin is in allowed list
+
     if (allowedOrigins.includes(origin)) {
       console.log('Origin allowed:', origin);
       return callback(null, true);
     }
-    
-    // For development, allow any localhost
+
     if (process.env.NODE_ENV !== 'production') {
       if (origin.includes('localhost') || origin.includes('127.0.0.1')) {
         console.log('Localhost allowed in development:', origin);
         return callback(null, true);
       }
     }
-    
+
     console.log('Blocked by CORS:', origin);
     return callback(new Error(`Not allowed by CORS: ${origin}`));
   },
