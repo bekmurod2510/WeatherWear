@@ -104,28 +104,28 @@ External Services
 
 Architecture
 
-weatherwear/
-├── frontend/                 # React Vite application
-│   ├── public/              # Static assets
-│   └── src/
-│       ├── components/      # React components
-│       │   ├── Auth/        # Login, Signup, ProtectedRoute
-│       │   ├── Homepage/    # WeatherForm, Display, Suggestions
-│       │   └── Layout/      # Navbar, Footer
-│       ├── hooks/           # Custom React hooks
-│       ├── App.jsx          # Main application component
-│       └── index.css        # Global Tailwind styles
-│
-├── backend/                 # Express.js API server
-│   ├── src/
-│   │   ├── controllers/     # Route controllers
-│   │   ├── routes/          # API route definitions
-│   │   ├── middleware/      # Auth and error middleware
-│   │   └── utils/           # Helper functions
-│   ├── prisma/             # Database schema and migrations
-│   └── server.js           # Application entry point
-│
-└── README.md               # This file
+    weatherwear/
+    ├── frontend/                 # React Vite application
+    │   ├── public/              # Static assets
+    │   └── src/
+    │       ├── components/      # React components
+    │       │   ├── Auth/        # Login, Signup, ProtectedRoute
+    │       │   ├── Homepage/    # WeatherForm, Display, Suggestions
+    │       │   └── Layout/      # Navbar, Footer
+    │       ├── hooks/           # Custom React hooks
+    │       ├── App.jsx          # Main application component
+    │       └── index.css        # Global Tailwind styles
+    │
+    ├── backend/                 # Express.js API server
+    │   ├── src/
+    │   │   ├── controllers/     # Route controllers
+    │   │   ├── routes/          # API route definitions
+    │   │   ├── middleware/      # Auth and error middleware
+    │   │   └── utils/           # Helper functions
+    │   ├── prisma/             # Database schema and migrations
+    │   └── server.js           # Application entry point
+    │
+    └── README.md               # This file
 
 Installation
 Prerequisites
