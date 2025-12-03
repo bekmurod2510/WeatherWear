@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String?
+  createdAt DateTime @default(now())
+  
+  searches SearchHistory[]
+  preferences UserPreferences?
+}
+
+model SearchHistory {
+  id             String   @id @default(cuid())
+  userId         String
+  location       String
+  temperature    Float
+  conditions     String
+  recommendations Json     // Store outfit recommendations as JSON
+  createdAt      DateTime @default(now())
+  
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model UserPreferences {
+  id            String   @id @default(cuid())
+  userId        String   @unique
+  temperatureUnit String   @default("celsius") // "celsius" or "fahrenheit"
+  clothingStyle  String   @default("casual")   // "casual", "formal", "sporty", etc.
+  
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
