@@ -15,7 +15,7 @@ const corsOptions = {
   origin: function (origin, callback) {
     // Allow these origins
     const allowedOrigins = [
-      'https://weatherwear.vercel.app',
+      'https://weather-wear-omega.vercel.app',
       'https://weatherwear-frontend.onrender.com', // If you also have Render frontend
       'http://localhost:5173'
     ];
