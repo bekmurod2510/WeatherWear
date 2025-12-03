@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import { IoMdSearch } from "react-icons/io";
 
 const RecentSearches = ({ onSelectLocation, limit = 5 }) => {
   const [searches, setSearches] = useState([])
@@ -94,7 +95,7 @@ const RecentSearches = ({ onSelectLocation, limit = 5 }) => {
         <div className="card-body">
           <h3 className="card-title">Recent Searches</h3>
           <div className="text-center py-6">
-            <div className="text-4xl mb-3">🔍</div>
+            <div className="text-5xl mb-3 text-center flex justify-center items-center"><IoMdSearch> </IoMdSearch></div>
             <p className="text-gray-500 mb-4">No recent searches found</p>
             <Link to="/dashboard" className="btn btn-primary btn-sm">
               Start Searching

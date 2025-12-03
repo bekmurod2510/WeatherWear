@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import axios from 'axios'
+import { IoMdSearch } from "react-icons/io";
 
 const WeatherForm = ({ onWeatherData }) => {
   const [location, setLocation] = useState('')
